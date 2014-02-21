@@ -187,13 +187,13 @@ class LifeGame(object):
   def checkFieldLife(self, x, y):
     try:
       return self.field[(x,y)].getLife()
-    except KeyError, e:
-      print(e.args[0])
+    except KeyError as e:
+      print((e.args[0]))
       traceback.print_exc(file=sys.stdout)
 
   def checkFieldNext(self, x, y):
     try:
       return self.field[(x,y)].getNext()
-    except KeyError, e:
-      print(e.args[0])
+    except KeyError as e:
+      print((e.args[0]))
       traceback.print_exc(file=sys.stdout)

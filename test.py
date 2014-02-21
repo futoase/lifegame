@@ -17,14 +17,14 @@ def testLifeGame():
   life.field[(7,6)].setTrueLife()
   while count < 100:
     time.sleep(0.3)
-    print 'step: %05d' % count
+    print('step: %05d' % count)
     for x in range(life.getX()):
       for y in range(life.getY()):
         if life.field[(x,y)].getLife():
-          print '*',
+          print('*', end=' ')
         else:
-          print '-',
-      print '\n',
+          print('-', end=' ')
+      print('\n', end=' ')
     [life.checkDeadOrAlive(n,m)
      for n in range(life.getX())
      for m in range(life.getY())]
